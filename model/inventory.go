@@ -27,7 +27,6 @@ func (i Inventory) Slots() []Slot {
 	slots := make([]Slot, 0, len(i.slots))
 
 	for _, value := range i.slots {
-		//		fmt.Printf("Slot - Q: %d I: %s", value.Quantity, value.Item.String())
 		slots = append(slots, *value)
 	}
 
