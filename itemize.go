@@ -1,11 +1,31 @@
 package main
 
-import "fmt"
-import "itemizedgo/model"
+import (
+	"fmt"
+	"itemizedgo/infrastructure"
+	"os"
+	"strconv"
+)
 
 func main() {
 
-	item := model.Item{}
+	count := 1
 
-	fmt.Printf("Hello %s!\n", item.String())
+	if len(os.Args) >= 2 {
+
+		countArg, err := strconv.Atoi(os.Args[1])
+
+		if err == nil {
+			count = countArg
+		}
+	}
+
+	itemFactory := infrastructure.ItemFactory{}
+
+	for i := 0; i < count; i++ {
+
+		item := itemFactory.MakeItem()
+		fmt.Printf("Hello %s!\n", item.String())
+	}
+
 }
