@@ -12,9 +12,9 @@ var once sync.Once
 // DefaultDescriptor holds the default descriptor for items
 func DefaultDescriptor() *Descriptor {
 
-    once.Do(func() {
-        instance = &Descriptor{}
-    })
+	once.Do(func() {
+		instance = &Descriptor{}
+	})
 
-    return instance
+	return instance
 }
