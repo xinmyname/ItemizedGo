@@ -5,8 +5,8 @@ type Inventory struct {
 	slots map[Descriptor]*Slot
 }
 
-// MakeInventory creates an Inventory object
-func MakeInventory() Inventory {
+// NewInventory creates an Inventory object
+func NewInventory() Inventory {
 	return Inventory{slots: make(map[Descriptor]*Slot)}
 }
 
@@ -16,7 +16,7 @@ func (i Inventory) AddItem(item Item) {
 	if slot, ok := i.slots[*item.Descriptor]; ok {
 		(*slot).Quantity++
 	} else {
-		newSlot := MakeSlot(item)
+		newSlot := NewSlot(item)
 		i.slots[*item.Descriptor] = &newSlot
 	}
 }

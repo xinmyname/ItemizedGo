@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"itemizedgo/infrastructure"
 	"itemizedgo/model"
 	"os"
 	"strconv"
@@ -21,11 +20,10 @@ func main() {
 		}
 	}
 
-	itemFactory := infrastructure.ItemFactory{}
-	inventory := model.MakeInventory()
+	inventory := model.NewInventory()
 
 	for i := 0; i < count; i++ {
-		inventory.AddItem(itemFactory.MakeItem())
+		inventory.AddItem(model.NewItem())
 	}
 
 	fmt.Println("You have:")

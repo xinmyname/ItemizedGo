@@ -2,6 +2,7 @@ package model
 
 import (
 	"fmt"
+	"itemizedgo/infrastructure"
 	"strconv"
 )
 
@@ -11,8 +12,8 @@ type Slot struct {
 	Item     Item
 }
 
-// MakeSlot creates a new Slot
-func MakeSlot(item Item) Slot {
+// NewSlot creates a new Slot
+func NewSlot(item Item) Slot {
 	return Slot{Quantity: 1, Item: item}
 }
 
@@ -20,13 +21,7 @@ func MakeSlot(item Item) Slot {
 func (slot Slot) String() string {
 
 	var quantityText string
-	var text string
-
-	if slot.Quantity == 1 {
-		text = slot.Item.String()
-	} else {
-		text = fmt.Sprintf("%ss", slot.Item.String())
-	}
+	text := infrastructure.PluralOf(slot.Item.String(), slot.Quantity)
 
 	switch slot.Quantity {
 	case 1:
