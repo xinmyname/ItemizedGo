@@ -47,3 +47,6 @@ Go made me think about pointers again.
 - strconv.Atoi() - are you kidding? "Atoi"?
 - No string interpolation - use Sprintf(). SPRINTF.
 - Can't resolve package cycles
+- No tuples
+- Arrays not implicitly converted to slices
+
