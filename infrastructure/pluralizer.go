@@ -67,7 +67,7 @@ var _ruleTemplates = [...]_RuleTemplate{
 	_RuleTemplate{rule: "(t)ooth$", template: "$1eeth"},
 	_RuleTemplate{rule: "lf$", template: "lves"},
 	_RuleTemplate{rule: "(f)oot$", template: "$1eet"},
-	_RuleTemplate{rule: "^(|wo|work|fire)man$", template: "$1men"},
+	_RuleTemplate{rule: "^(wo|work|fire)man$", template: "$1men"},
 	_RuleTemplate{rule: "(potat|tomat|volcan)o$", template: "$1oes"},
 	_RuleTemplate{rule: "(criteri|phenomen)on$", template: "$1a"},
 	_RuleTemplate{rule: "(nebul)a", template: "$1ae"},
@@ -86,7 +86,7 @@ var _ruleTemplates = [...]_RuleTemplate{
 	_RuleTemplate{rule: "(ax)is", template: "$1es"},
 	_RuleTemplate{rule: "(sh|zz|ss)$", template: "$1es"},
 	_RuleTemplate{rule: "x$", template: "xes"},
-	_RuleTemplate{rule: "(t|r|l|b)y$", template: "$1ies"},
+	_RuleTemplate{rule: "(t|sp|r|l|b)y$", template: "$1ies"},
 	_RuleTemplate{rule: "s$", template: "ses"},
 	_RuleTemplate{rule: "$", template: "s"},
 }
