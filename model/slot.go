@@ -2,8 +2,9 @@ package model
 
 import (
 	"fmt"
-	"itemizedgo/infrastructure"
 	"strconv"
+
+	"itemizedgo/infrastructure"
 )
 
 // Slot contains a quantity and an Item

@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
-	"itemizedgo/model"
 	"os"
 	"strconv"
+
+	"itemizedgo/model"
 )
 
 func main() {
